@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Aadrita ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#ffe4ec;
+    font-family:'Poppins',sans-serif;
+}
+
+/* pages */
+
+.page{
+    width:100vw;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    position:absolute;
+    background:linear-gradient(
+        180deg,
+        #ffeef3,
+        #ffdce8
+    );
+    animation:fade .8s;
+}
+
+.page.active{
+    display:flex;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* tulips */
+
+.leftTulip,
+.rightTulip{
+    position:absolute;
+    bottom:0;
+    width:240px;
+    opacity:.9;
+}
+
+.leftTulip{
+    left:0;
+}
+
+.rightTulip{
+    right:0;
+    transform:scaleX(-1);
+}
+
+/* card */
+
+.card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    width:80%;
+    max-width:800px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,.1);
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#e45b8c;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.9;
+    color:#444;
+}
+
+button{
+    margin-top:25px;
+    background:#ea6d9c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* gallery */
+
+.gallery{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.gallery img{
+    width:170px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    background:white;
+    padding:8px;
+}
+
+/* petals */
+
+.petal{
+    position:absolute;
+    color:#ff8eb3;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- petals -->
+<script>
+for(let i=0;i<30;i++){
+    let p=document.createElement("div");
+    p.innerHTML="🌸";
+    p.className="petal";
+    p.style.left=Math.random()*100+"vw";
+    p.style.fontSize=(15+Math.random()*20)+"px";
+    p.style.animationDuration=(8+Math.random()*8)+"s";
+    document.body.appendChild(p);
+}
+</script>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="p1">
+
+<img class="leftTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<img class="rightTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<div class="card">
+
+<h1>For Aadrita ❤️</h1>
+
+<p>
+Before you leave Kolkata for Pune,
+I wanted to leave you with something
+that you can always come back to.
+<br><br>
+This little website holds
+my wishes, our memories,
+and a piece of my heart.
+</p>
+
+<button onclick="next(2)">
+Tap To Open →
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page" id="p2">
+
+<img class="leftTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<img class="rightTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<div class="card">
+
+<h1>Your New Journey 🌸</h1>
+
+<p>
+Dear Aadrita,
+<br><br>
+I hope Pune welcomes you
+with beautiful memories,
+wonderful friends,
+and countless moments
+that make you smile.
+<br><br>
+You are stronger,
+braver,
+and more capable
+than you think.
+<br><br>
+I'm incredibly proud of you.
+</p>
+
+<button onclick="next(3)">
+Next →
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page" id="p3">
+
+<img class="leftTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<img class="rightTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<div class="card">
+
+<h1>Our Memories 📸</h1>
+
+<div class="gallery">
+
+<img src="photo1.png">
+<img src="photo2.png">
+<img src="photo3.png">
+<img src="photo4.png">
+
+</div>
+
+<p style="margin-top:20px">
+Some people become memories.
+Some memories become forever.
+</p>
+
+<button onclick="next(4)">
+Next →
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 4 -->
+
+<div class="page" id="p4">
+
+<img class="leftTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<img class="rightTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<div class="card">
+
+<h1>A Letter From Purnima 💌</h1>
+
+<p>
+Dear Aadrita,
+<br><br>
+I still can't believe
+that you're leaving Kolkata.
+<br><br>
+Thank you for every laugh,
+every conversation,
+every memory,
+and every moment
+that made our friendship special.
+<br><br>
+Distance may change our location,
+but never the place
+you have in my heart.
+<br><br>
+I'll miss you
+more than these words
+can explain.
+<br><br>
+— Purnima ❤️
+</p>
+
+<button onclick="next(5)">
+One Last Thing →
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 5 -->
+
+<div class="page" id="p5">
+
+<img class="leftTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<img class="rightTulip"
+src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+
+<div class="card">
+
+<h1>Not Goodbye... 🌙</h1>
+
+<p>
+This is not a goodbye.
+<br><br>
+This is simply the beginning
+of your next story.
+<br><br>
+Go to Pune.
+Dream.
+Learn.
+Laugh.
+Grow.
+Shine.
+<br><br>
+And whenever you miss Kolkata,
+remember that somewhere here,
+there is a friend named Purnima
+who will always be cheering for you.
+<br><br>
+<b>
+Until we meet again...
+</b>
+<br><br>
+❤️
+</p>
+
+</div>
+</div>
+
+<script>
+function next(n){
+document.querySelectorAll('.page')
+.forEach(x=>x.classList.remove('active'));
+
+document.getElementById('p'+n)
+.classList.add('active');
+}
+</script>
+
+</body>
+</html>
