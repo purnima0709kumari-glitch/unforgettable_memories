@@ -1,370 +1,1009 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>For Aadrita ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body{
-    overflow:hidden;
-    background:#ffe4ec;
-    font-family:'Poppins',sans-serif;
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
+font-family:'Segoe UI',sans-serif;
+background:#f8dce7;
 }
-
-/* pages */
 
 .page{
-    width:100vw;
-    height:100vh;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    position:absolute;
-    background:linear-gradient(
-        180deg,
-        #ffeef3,
-        #ffdce8
-    );
-    animation:fade .8s;
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+animation:fade .8s;
+overflow:hidden;
 }
 
 .page.active{
-    display:flex;
+display:flex;
 }
 
 @keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+from{
+opacity:0;
+transform:translateY(20px);
 }
-
-/* tulips */
-
-.leftTulip,
-.rightTulip{
-    position:absolute;
-    bottom:0;
-    width:240px;
-    opacity:.9;
+to{
+opacity:1;
+transform:translateY(0);
 }
-
-.leftTulip{
-    left:0;
 }
-
-.rightTulip{
-    right:0;
-    transform:scaleX(-1);
-}
-
-/* card */
 
 .card{
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(10px);
-    padding:40px;
-    width:80%;
-    max-width:800px;
-    border-radius:30px;
-    text-align:center;
-    box-shadow:0 10px 40px rgba(0,0,0,.1);
-}
-
-h1{
-    font-family:'Great Vibes',cursive;
-    font-size:65px;
-    color:#e45b8c;
-    margin-bottom:20px;
-}
-
-p{
-    font-size:18px;
-    line-height:1.9;
-    color:#444;
+width:90%;
+max-width:420px;
+height:90vh;
+padding:25px;
+border-radius:30px;
+overflow:auto;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+text-align:center;
 }
 
 button{
-    margin-top:25px;
-    background:#ea6d9c;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:40px;
-    cursor:pointer;
-    font-size:17px;
+background:#7ba3d8;
+color:white;
+border:none;
+padding:14px 30px;
+border-radius:30px;
+font-size:16px;
+margin-top:25px;
+cursor:pointer;
+font-weight:bold;
 }
 
 button:hover{
-    transform:scale(1.05);
+transform:scale(1.05);
 }
 
-/* gallery */
-
-.gallery{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:25px;
+input{
+width:85%;
+padding:15px;
+border:none;
+border-radius:25px;
+font-size:17px;
+text-align:center;
+margin-top:20px;
 }
 
-.gallery img{
-    width:170px;
-    height:220px;
-    object-fit:cover;
-    border-radius:20px;
-    background:white;
-    padding:8px;
+h1{
+font-family:'Great Vibes',cursive;
+font-size:58px;
+margin-bottom:15px;
 }
-
-/* petals */
 
 .petal{
-    position:absolute;
-    color:#ff8eb3;
-    animation:fall linear infinite;
+position:absolute;
+animation:fall linear infinite;
 }
 
 @keyframes fall{
-    from{
-        transform:translateY(-100px) rotate(0deg);
-    }
-    to{
-        transform:translateY(110vh) rotate(360deg);
-    }
+from{
+transform:translateY(-100px)
+rotate(0deg);
 }
+to{
+transform:translateY(110vh)
+rotate(360deg);
+}
+}
+
+/* PASSWORD */
+
+#passwordPage{
+background:
+linear-gradient(
+180deg,
+#ffeef3,
+#ffdce8);
+}
+
+.passwordCard{
+background:
+rgba(255,255,255,.8);
+backdrop-filter:blur(10px);
+}
+
+/* CONGRATS */
+
+#congrats{
+background:
+linear-gradient(
+180deg,
+#f3f7ff,
+#dbe9f7);
+}
+
+/* ENVELOPE */
+
+#envelopePage{
+background:
+linear-gradient(
+180deg,
+#edf5ff,
+#dce8f8);
+}
+
+.envelope{
+position:relative;
+width:280px;
+height:180px;
+margin-top:30px;
+cursor:pointer;
+}
+
+.base{
+position:absolute;
+bottom:0;
+width:100%;
+height:120px;
+background:#A7C7E7;
+border-radius:0 0 15px 15px;
+}
+
+.flap{
+position:absolute;
+top:0;
+width:0;
+height:0;
+border-left:140px solid transparent;
+border-right:140px solid transparent;
+border-top:100px solid #8db3d7;
+transform-origin:top;
+transition:1s;
+}
+
+.envelope.open .flap{
+transform:rotateX(180deg);
+}
+
+.letter{
+position:absolute;
+left:20px;
+top:60px;
+width:240px;
+height:110px;
+background:white;
+border-radius:10px;
+transition:1.2s;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:18px;
+font-family:'Dancing Script';
+}
+
+.envelope.open .letter{
+transform:translateY(-130px);
+}
+
+.heart{
+position:absolute;
+left:50%;
+top:80px;
+transform:translateX(-50%);
+font-size:30px;
+z-index:100;
+cursor:pointer;
+}
+
+.message{
+font-size:18px;
+color:#555;
+margin-top:25px;
+font-style:italic;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- petals -->
+<audio id="music" loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b0d9d.mp3?filename=calm-piano-ambient-110397.mp3">
+</audio>
+
 <script>
 for(let i=0;i<30;i++){
-    let p=document.createElement("div");
-    p.innerHTML="🌸";
-    p.className="petal";
-    p.style.left=Math.random()*100+"vw";
-    p.style.fontSize=(15+Math.random()*20)+"px";
-    p.style.animationDuration=(8+Math.random()*8)+"s";
-    document.body.appendChild(p);
+let p=document.createElement("div");
+p.className="petal";
+p.innerHTML="🌸";
+p.style.left=Math.random()*100+"vw";
+p.style.fontSize=(15+Math.random()*15)+"px";
+p.style.animationDuration=(8+Math.random()*8)+"s";
+document.body.appendChild(p);
 }
 </script>
 
-<!-- PAGE 1 -->
+<!-- PASSWORD -->
 
-<div class="page active" id="p1">
+<div class="page active"
+id="passwordPage">
 
-<img class="leftTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<img class="rightTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<div class="card">
+<div class="card passwordCard">
 
 <h1>For Aadrita ❤️</h1>
 
 <p>
-Before you leave Kolkata for Pune,
-I wanted to leave you with something
-that you can always come back to.
-<br><br>
-This little website holds
-my wishes, our memories,
-and a piece of my heart.
+<b>
+What are the first two
+letters of the school
+where we studied together?
+</b>
 </p>
 
-<button onclick="next(2)">
-Tap To Open →
+<input
+id="pass"
+placeholder="Enter answer">
+
+<button
+onclick="checkPassword()">
+Unlock ❤️
+</button>
+
+<p id="wrong"
+style="margin-top:20px;
+color:#d85b89;">
+</p>
+
+</div>
+</div>
+
+<!-- CONGRATS -->
+
+<div class="page"
+id="congrats">
+
+<div class="card">
+
+<h1>
+CONGRATULATIONS ✨
+</h1>
+
+<p>
+You unlocked
+a little piece
+of my heart.
+</p>
+
+<button
+onclick="openEnvelopePage()">
+Continue →
 </button>
 
 </div>
 </div>
 
-<!-- PAGE 2 -->
+<!-- ENVELOPE -->
 
-<div class="page" id="p2">
-
-<img class="leftTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<img class="rightTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+<div class="page"
+id="envelopePage">
 
 <div class="card">
 
-<h1>Your New Journey 🌸</h1>
+<h1
+style="color:#6d92c3">
+For Aadrita
+</h1>
 
-<p>
-Dear Aadrita,
+<div
+class="envelope"
+id="env">
+
+<div class="flap"></div>
+
+<div class="base"></div>
+
+<div class="letter">
+💌
+</div>
+
+<div
+class="heart"
+onclick="openEnvelope()">
+❤️
+</div>
+
+</div>
+
+<p class="message">
+A little piece
+of my heart
+is waiting inside...
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function hideAll(){
+document
+.querySelectorAll('.page')
+.forEach(
+x=>x.classList
+.remove('active'));
+}
+
+function checkPassword(){
+
+let p=
+document
+.getElementById('pass')
+.value;
+
+if(p==="ashok hall"){
+
+hideAll();
+
+document
+.getElementById(
+'congrats')
+.classList
+.add('active');
+
+}
+else{
+
+document
+.getElementById(
+'wrong')
+.innerHTML=
+"Try again ❤️";
+
+}
+
+}
+
+function openEnvelopePage(){
+
+hideAll();
+
+document
+.getElementById(
+'envelopePage')
+.classList
+.add('active');
+
+}
+
+function openEnvelope(){
+
+document
+.getElementById(
+'env')
+.classList
+.add('open');
+
+document
+.getElementById(
+'music')
+.play();
+
+setTimeout(
+function(){
+
+showPage1();
+
+},1700);
+
+}
+<!-- PAGE 1 -->
+
+<div class="page"
+id="page1">
+
+<div
+class="card"
+style="
+background:
+linear-gradient(
+180deg,
+#f3d6db,
+#f8e7ea);
+border:8px solid #b88ca0;
+position:relative;">
+
+<div
+style="
+position:absolute;
+top:15px;
+right:15px;
+font-size:45px;">
+🎀
+</div>
+
+<div
+style="
+position:absolute;
+bottom:15px;
+left:15px;
+font-size:45px;">
+🎀
+</div>
+
+<div
+style="
+font-family:
+'Bradley Hand',
+cursive;
+font-size:28px;
+line-height:1.8;
+margin-top:70px;">
+
+<b><i>
+Before you leave
+Kolkata for Pune,
+</i></b>
+
 <br><br>
-I hope Pune welcomes you
+
+I wanted to leave you
+with something
+that you can always
+come back to.
+
+<br><br>
+
+<u>
+This little website
+holds my wishes,
+our memories,
+and a piece
+of my heart.
+</u>
+
+</div>
+
+<button
+onclick="showPage2()">
+NEXT →
+</button>
+
+</div>
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page"
+id="page2">
+
+<div
+class="card"
+style="
+background:
+linear-gradient(
+135deg,
+#b68ca2,
+#dfb1bc);">
+
+<div
+style="
+font-family:
+Forte,
+cursive;
+font-size:26px;
+line-height:1.8;
+margin-top:40px;
+color:white;">
+
+I hope Pune
+welcomes you
+
+<br><br>
+
 with beautiful memories,
+
+<br>
+
 wonderful friends,
+
+<br>
+
 and countless moments
+
+<br>
+
 that make you smile.
+
 <br><br>
+
+<b>
 You are stronger,
 braver,
 and more capable
 than you think.
-<br><br>
-I'm incredibly proud of you.
-</p>
+</b>
 
-<button onclick="next(3)">
-Next →
+<br><br>
+
+<u>
+I'm incredibly
+proud of you.
+</u>
+
+</div>
+
+<button
+onclick="showPage3()">
+NEXT →
 </button>
 
 </div>
 </div>
+
 
 <!-- PAGE 3 -->
 
-<div class="page" id="p3">
+<div class="page"
+id="page3">
 
-<img class="leftTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+<div
+class="card"
+style="
+background:
+linear-gradient(
+180deg,
+#ffe5ef,
+#ffd6e5);">
 
-<img class="rightTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
+<div
+style="
+font-family:
+'Lucida Calligraphy',
+cursive;
+font-size:20px;
+line-height:2;
+text-align:left;">
 
-<div class="card">
+<center>
 
-<h1>Our Memories 📸</h1>
+<h1
+style="
+font-size:50px;">
+💌
+</h1>
 
-<div class="gallery">
+</center>
 
-<img src="photo1.png.png">
-<img src="photo2.png.png">
-<img src="photo3.png.png">
-<img src="photo4.png.png">
-
-</div>
-
-<p style="margin-top:20px">
-Some people become memories.
-Some memories become forever.
-</p>
-
-<button onclick="next(4)">
-Next →
-</button>
-
-</div>
-</div>
-
-<!-- PAGE 4 -->
-
-<div class="page" id="p4">
-
-<img class="leftTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<img class="rightTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<div class="card">
-
-<h1>A Letter From Purnima 💌</h1>
-
-<p>
+<b>
 Dear Aadrita,
+</b>
+
 <br><br>
+
 I still can't believe
-that you're leaving Kolkata.
+that you're leaving
+Kolkata.
+
 <br><br>
-Thank you for every laugh,
+
+Thank you for every
+laugh,
 every conversation,
 every memory,
 and every moment
-that made our friendship special.
+that made our
+friendship special.
+
 <br><br>
-Distance may change our location,
+
+<u>
+Distance may change
+our location,
 but never the place
 you have in my heart.
+</u>
+
 <br><br>
+
+<i>
 I'll miss you
 more than these words
 can explain.
-<br><br>
-— Purnima ❤️
-</p>
+</i>
 
-<button onclick="next(5)">
-One Last Thing →
+<br><br>
+
+<b>
+— Purnima ❤️
+</b>
+
+</div>
+
+<button
+onclick="showPage4()">
+NEXT →
 </button>
 
 </div>
 </div>
 
-<!-- PAGE 5 -->
-
-<div class="page" id="p5">
-
-<img class="leftTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<img class="rightTulip"
-src="https://pngimg.com/uploads/tulip/tulip_PNG31.png">
-
-<div class="card">
-
-<h1>Not Goodbye... 🌙</h1>
-
-<p>
-This is not a goodbye.
-<br><br>
-This is simply the beginning
-of your next story.
-<br><br>
-Go to Pune.
-Dream.
-Learn.
-Laugh.
-Grow.
-Shine.
-<br><br>
-And whenever you miss Kolkata,
-remember that somewhere here,
-there is a friend named Purnima
-who will always be cheering for you.
-<br><br>
-<b>
-Until we meet again...
-</b>
-<br><br>
-❤️
-</p>
-
-</div>
-</div>
 
 <script>
-function next(n){
-document.querySelectorAll('.page')
-.forEach(x=>x.classList.remove('active'));
 
-document.getElementById('p'+n)
-.classList.add('active');
+function showPage1(){
+
+hideAll();
+
+document
+.getElementById(
+'page1')
+.classList
+.add('active');
+
 }
+
+function showPage2(){
+
+hideAll();
+
+document
+.getElementById(
+'page2')
+.classList
+.add('active');
+
+}
+
+function showPage3(){
+
+hideAll();
+
+document
+.getElementById(
+'page3')
+.classList
+.add('active');
+
+}
+
+function showPage4(){
+
+hideAll();
+
+document
+.getElementById(
+'page4')
+.classList
+.add('active');
+
+}
+
+</script>
+<!-- PAGE 4 -->
+
+<div class="page"
+id="page4">
+
+<div
+class="card"
+style="
+background:
+linear-gradient(
+180deg,
+#ffe9ef,
+#ffdbe7);">
+
+<h1
+style="
+font-family:
+'Dancing Script';
+color:#d86c96;">
+MEMORIES 💛
+</h1>
+
+<div
+style="
+display:grid;
+grid-template-columns:
+1fr 1fr;
+gap:15px;
+margin-top:20px;">
+
+<div
+style="
+background:white;
+padding:8px;
+border-radius:20px;
+box-shadow:
+0 5px 15px
+rgba(0,0,0,.1);
+transform:
+rotate(-4deg);">
+
+<img
+src="photo1.png.png"
+style="
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:15px;">
+
+</div>
+
+<div
+style="
+background:white;
+padding:8px;
+border-radius:20px;
+box-shadow:
+0 5px 15px
+rgba(0,0,0,.1);
+transform:
+rotate(4deg);">
+
+<img
+src="photo2.png.png"
+style="
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:15px;">
+
+</div>
+
+<div
+style="
+background:white;
+padding:8px;
+border-radius:20px;
+box-shadow:
+0 5px 15px
+rgba(0,0,0,.1);
+transform:
+rotate(3deg);">
+
+<img
+src="photo3.png.png"
+style="
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:15px;">
+
+</div>
+
+<div
+style="
+background:white;
+padding:8px;
+border-radius:20px;
+box-shadow:
+0 5px 15px
+rgba(0,0,0,.1);
+transform:
+rotate(-3deg);">
+
+<img
+src="photo4.png.png"
+style="
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:15px;">
+
+</div>
+
+</div>
+
+<button
+onclick="showPage5()">
+NEXT →
+</button>
+
+</div>
+</div>
+
+
+<!-- PAGE 5 -->
+
+<div class="page"
+id="page5">
+
+<div
+class="card"
+style="
+background:
+linear-gradient(
+135deg,
+#b68ca2,
+#dfb1bc);">
+
+<div
+style="
+font-family:
+'MV Boli',
+cursive;
+font-size:23px;
+line-height:1.8;
+color:white;
+margin-top:30px;">
+
+<b>
+This is not
+a goodbye.
+</b>
+
+<br><br>
+
+This is simply
+the beginning
+of your next story.
+
+<br><br>
+
+Dream.
+
+<br>
+
+Learn.
+
+<br>
+
+Laugh.
+
+<br>
+
+Grow.
+
+<br>
+
+Shine.
+
+<br><br>
+
+And whenever
+you miss Kolkata,
+
+remember that
+somewhere here,
+
+there is a friend
+named
+
+<b>
+Purnima
+</b>
+
+who will always
+be cheering
+for you.
+
+<br><br>
+
+<i>
+Until we meet again...
+</i>
+
+</div>
+
+<button
+onclick="showFinal()">
+NEXT →
+</button>
+
+</div>
+</div>
+
+
+<!-- FINAL PAGE -->
+
+<div class="page"
+id="finalPage">
+
+<div
+class="card"
+style="
+background:
+linear-gradient(
+180deg,
+#fff2f6,
+#ffe3eb);
+display:flex;
+justify-content:center;
+align-items:center;">
+
+<div
+style="
+font-size:28px;
+line-height:1.8;
+font-family:
+'Great Vibes';
+color:#d85b89;">
+
+❤️
+
+<br><br>
+
+THANK YOU
+
+<br>
+
+FOR THE
+
+<br>
+
+MEMORIES
+
+<br>
+
+WE'VE MADE —
+
+<br><br>
+
+MAY THE ONES
+
+AHEAD
+
+BE EVEN MORE
+
+TENDER.
+
+<br><br>
+
+🌷
+
+</div>
+
+</div>
+</div>
+
+
+<script>
+
+function showPage5(){
+
+hideAll();
+
+document
+.getElementById(
+'page5')
+.classList
+.add('active');
+
+}
+
+function showFinal(){
+
+hideAll();
+
+document
+.getElementById(
+'finalPage')
+.classList
+.add('active');
+
+}
+
 </script>
 
 </body>
